@@ -1,0 +1,22 @@
+div {
+  border: 0.05rem solid red;
+  text-align: center;
+  padding: 1rem;
+}
+div h1 {
+  text-decoration: 0.1rem underline blue;
+  color: green;
+}
+div section {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  border: 0.05rem solid green;
+}
+div section article {
+  border: 0.05rem solid green;
+  padding: 1rem;
+  color: red;
+}
+div section article:nth-child(odd) {
+  color: blue;
+}

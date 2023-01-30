@@ -1,0 +1,27 @@
+$color-primary: red;
+$color-secondary: blue;
+$color-tertiary: green;
+$border: 0.05rem solid;
+
+div {
+  border: $border $color-primary;
+  text-align: center;
+  padding: 1rem;
+  h1 {
+    text-decoration: 0.1rem underline $color-secondary;
+    color: $color-tertiary;
+  }
+  section {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    border: $border $color-tertiary;
+    article {      
+      border: $border $color-tertiary;
+      padding: 1rem;
+      color: $color-primary;
+      &:nth-child(odd) {
+        color: $color-secondary;
+      }
+    }
+  }
+}
