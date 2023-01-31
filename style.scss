@@ -17,7 +17,7 @@ $font-default: 1rem !default;
   display: grid;
   grid-template-rows: auto auto;
   gap: 1rem;
-  @include article_style($color-primary, $color-primary);
+  @include article_style($color-primary, $color-primary, $font-default);
   h1 {
     text-decoration: 0.1rem underline $color-secondary;
     color: $color-tertiary;
@@ -26,14 +26,14 @@ $font-default: 1rem !default;
     display: grid;
     grid-template-columns: auto auto auto auto;
     border: $border;
-    @include article_style($color-primary, $color-tertiary);
+    @include article_style($color-primary, $color-tertiary, $font-default);
 
     article {
       border: $border;
       padding: 1rem;
-      @include article_style($color-primary, $color-tertiary);
+      @include article_style($color-primary, $color-tertiary, $font-default);
       &:nth-child(odd) {
-        @include article_style($color-secondary, $color-tertiary);
+        @include article_style($color-secondary, $color-tertiary, $font-default);
       }
     }
   }
