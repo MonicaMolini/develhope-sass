@@ -1,0 +1,17 @@
+@function rem($number) {    
+    $value: calc($number/16px) + rem;
+     @return $value
+   }   
+
+@mixin article_style($color, $border-color, $font-default) {
+    color: $color;
+    border-color: $border-color;
+    font-size: $font-default;
+  }
+  
+
+$color-primary: red;
+$color-secondary: blue;
+$color-tertiary: green;
+$border: rem(1px) solid;
+$font-default: rem(16px) !default;
