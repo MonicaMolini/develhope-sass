@@ -1,0 +1,47 @@
+$color-primary: red;
+$color-secondary: blue;
+$color-tertiary: green;
+$border: 1px solid;
+$font-default: 1rem !default;
+
+@mixin article_style($color, $border-color, $font-default) {
+  color: $color;
+  border-color: $border-color;
+  font-size: $font-default;
+}
+
+.hero {
+  border: $border;
+  text-align: center;
+  padding: 1rem;
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 1rem;
+  @include article_style($color-primary, $color-primary);
+  h1 {
+    text-decoration: 0.1rem underline $color-secondary;
+    color: $color-tertiary;
+  }
+  .hero__first {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    border: $border;
+    @include article_style($color-primary, $color-tertiary);
+
+    article {
+      border: $border;
+      padding: 1rem;
+      @include article_style($color-primary, $color-tertiary);
+      &:nth-child(odd) {
+        @include article_style($color-secondary, $color-tertiary);
+      }
+    }
+  }
+  .hero__second {
+    article {
+      border: $border;
+      padding: 1rem;
+      @include article_style($color-tertiary, $color-secondary, 24px);
+    }
+  }
+}
