@@ -1,0 +1,57 @@
+.hero {
+  margin: 1.125rem;
+  border: 0.125rem solid;
+  text-align: center;
+  padding: 1rem;
+  display: grid;
+  grid-template-rows: auto;
+  gap: 1rem;
+  color: red;
+  border-color: red;
+  font-size: 1rem;
+}
+.hero .title, .hero .title__subtitle h2 {
+  -webkit-text-decoration: 0.125rem underline blue;
+          text-decoration: 0.125rem underline blue;
+  text-underline-offset: 0.5rem;
+  color: green;
+  margin-bottom: 0;
+}
+.hero .title__subtitle {
+  display: flex;
+  justify-content: center;
+}
+.hero .title__subtitle h2 {
+  text-decoration: none;
+  padding: 1rem;
+  border: 0.125rem solid red;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.hero .hero__first {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  color: red;
+  border-color: green;
+  font-size: 1rem;
+}
+.hero .hero__first article {
+  border: 0.125rem solid;
+  padding: 1rem;
+  color: red;
+  border-color: green;
+  font-size: 1rem;
+}
+.hero .hero__first article:nth-child(odd) {
+  color: blue;
+  border-color: green;
+  font-size: 1rem;
+}
+.hero .hero__second article {
+  border: 0.125rem solid;
+  padding: 1rem;
+  color: green;
+  border-color: blue;
+  font-size: 1.5rem;
+}

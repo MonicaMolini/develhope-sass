@@ -1,0 +1,52 @@
+@use "function.scss" as f;
+
+.hero {
+  margin: f.rem(18px);
+  border: f.$border;
+  text-align: center;
+  padding: 1rem;
+  display: grid;
+  grid-template-rows: auto;
+  gap: f.rem(16px);
+  @include f.article_style(f.$color-primary, f.$color-primary, f.$font-default);     
+  .title { 
+    text-decoration: f.rem(2px) underline f.$color-secondary;
+    text-underline-offset: 0.5rem;
+    color: f.$color-tertiary;
+    margin-bottom: 0;
+    &__subtitle{
+      display: flex;
+      justify-content: center;         
+      h2{
+        @extend .title;
+        text-decoration: none;
+        padding: 1rem;
+        border: f.$border f.$color-primary;
+        width: fit-content;
+         
+      }           
+                  
+    }   
+  }
+  .hero__first {
+    display: grid;
+    grid-template-columns: auto auto auto auto;   
+    @include f.article_style(f.$color-primary, f.$color-tertiary, f.$font-default);
+
+    article {
+      border: f.$border;
+      padding: 1rem;
+      @include f.article_style(f.$color-primary, f.$color-tertiary, f.$font-default);
+      &:nth-child(odd) {
+        @include f.article_style(f.$color-secondary, f.$color-tertiary, f.$font-default);
+      }
+    }
+  }
+  .hero__second {
+    article {
+      border: f.$border;
+      padding: 1rem;
+      @include f.article_style(f.$color-tertiary, f.$color-secondary, f.rem(24px));
+    }
+  }
+}
