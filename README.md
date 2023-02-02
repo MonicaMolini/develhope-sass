@@ -1,2 +1,0 @@
-# develhope-sass
-Sass exercises

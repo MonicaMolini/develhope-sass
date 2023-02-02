@@ -1,0 +1,40 @@
+
+$color-first: rgb(255, 255, 255);
+$color-end: rgb(0, 0, 0);
+$sizes: "fs-1rem", "fs-2rem", "fs-3rem";
+
+@for $var from 1 through 19 {  
+    @if $var >= 1 {
+      li:nth-child(#{$var}) {
+        background-color: darken($color-first, $var * 5%);
+        color: lighten($color-end, $var * 5%);
+      }
+    }
+    @if $var == 10 {
+      li:nth-child(#{$var}) {
+        background-color: blue;
+        color: red;
+        font-size: 2rem;
+      }
+    }
+  }
+  
+  @each $variable in $sizes {
+  
+    li.#{$variable} {
+  
+      @if $variable == "fs-1rem" {
+            font-size: 1rem;      
+      }
+  
+      @else if $variable == "fs-2rem" {
+            font-size: 2rem;       
+        }
+  
+        @if $variable == "fs-3rem" {        
+            font-size: 3rem;        
+        }
+      }
+    }
+  
+  
